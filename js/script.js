@@ -90,31 +90,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// Contact Form Handler
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.querySelector('.contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault(); // Prevent the default POST request
-            
-            const btn = contactForm.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            
-            // Show loading state
-            btn.innerHTML = 'Sending...';
-            
-            // Simulate a network request
-            setTimeout(() => {
-                alert('Thank you for your message! \n\n(Note: Since this is a static website template, no email was actually sent. Please email me directly at misslipika.sau@gmail.com)');
-                
-                // Reset button and form
-                btn.innerHTML = 'Message Sent! ✓';
-                contactForm.reset();
-                
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                }, 3000);
-            }, 800);
-        });
-    }
-});
+
